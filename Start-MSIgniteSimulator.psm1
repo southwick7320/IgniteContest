@@ -24,7 +24,7 @@ param(
     
 "@
     if($startingdigits){
-        $range = ((0..9) | get-random -Count $startingdigits)
+        $range = @(((0..9) | get-random -Count $startingdigits))
         $ticketdigitcount = 6-$startingdigits
     } else {
         $ticketdigitcount = 6
